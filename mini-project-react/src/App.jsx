@@ -3,14 +3,13 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import SearchBox from "./SearchBox"
-
-// import SearchBoxDemo from "./SearchBoxDemo"
+import WeatherApp from "./WeatherApp";
 
 function App() {
   return (
     
       <div>
-        < SearchBox/>
+        < WeatherApp/>
        </div>
       
     

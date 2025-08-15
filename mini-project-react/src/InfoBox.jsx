@@ -6,27 +6,22 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
 
-export default function InfoBox() {
+export default function InfoBox( {info} ) {
 
     const INIT_URL = "https://unsplash.com/photos/a-foggy-picture-of-a-city-with-tall-buildings-UArWxgKpPpk";
 
-  let info ={
-    city: "Delhi",
-    feelslike: 24.84,
-    temp: 25.05,
-    tempMin: 25.05,
-    tempMax: 25.05,
-    humidity: 47,
-    weather: "haze",
-  };
+    const HOT_URL = "https://unsplash.com/photos/silhouette-of-mountains-during-golden-hour-7KrWmnpRafw";
+    const COLD_URL ="https://unsplash.com/photos/a-snow-covered-road-in-the-middle-of-a-forest-ZG2faW8rxDk";
+    const RAIN_URL ="https://unsplash.com/photos/grayscale-photography-of-raindrops-Nw_D8v79PM4";
+  
   return (
     <div className="InfoBox">
-        <h1>WeatherInfo-{info.weather}</h1>
-
+        
+        <div className='cardContainer'>
         <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         sx={{ height: 140 }}
-        image="INIT_URL"
+        image={info.humidity>80? RAIN_URL: info.temp >15? HOT_URL: COLD_URL}
         title="green iguana"
       />
       <CardContent>
@@ -42,7 +37,7 @@ export default function InfoBox() {
                   </Typography>
       </CardContent>
      </Card>
-
+     </div>
     </div>
   );
 }
