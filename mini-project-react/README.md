@@ -15,4 +15,4 @@ React.js
 
 OpenWeatherMap API
 
-CSS / Tailwind CSS (update if needed)
+CSS
